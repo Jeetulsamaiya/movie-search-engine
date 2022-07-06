@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+
+<body>
+  <div id="main">
+    <div id="nav">
+      <h2><a href="/">Movie Search Engine</a></h2>
+      <div id="links">
+
+        <a href="/create">Create Movies</a>
+        <a href="/search">Search Movies</a>
+
+      </div>
+    </div>
+    <div id="moviecard">
+      <h3>Movie List</h3>
+      <% allmovies.forEach(elem => { %>
+
+      <div class="card">
+        <h2><%= elem.name %> </h2>
+        <div class="img">
+          <img src="<%= elem.img %> " alt="">
+        </div>
+        <h5>imbd rating - : <%= elem.imbd %> </h5>
+        <p><%= elem.details %> </p>
+        <div class="cardlinks">
+
+          <a href="/read/<%= elem._id %> ">Read</a>
+
+          <a href="/delete/<%= elem._id %>">Delete</a>
+          <a href="/update/<%= elem._id %>">Update</a>
+        </div>
+      </div>
+      <%    }); %>
+    </div>
+
+  </div>
+</body>
+
+</html>
