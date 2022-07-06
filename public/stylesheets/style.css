@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'gilroy';
+
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black
+}
+
+#main {
+  min-height: 100%;
+  width: 100%;
+  background-color: rgb(250, 193, 193);
+}
+
+#nav {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(201, 144, 255);
+  padding-left: 50px;
+  padding-right: 50px;
+
+}
+
+#nav #links {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#nav #links a {
+  font-size: 22px;
+  text-decoration: none;
+  color: black;
+  font-family: 'gilroy';
+}
+
+#moviecard {
+  margin-top: 30px;
+  margin-left: 12.5%;
+  min-height: 0%;
+  width: 75%;
+  /* background-color: rgb(176, 255, 176); */
+}
+
+.card {
+  position: relative;
+  background-color: rgb(176, 255, 176);
+  height: 210px;
+  margin-top: 30px;
+  border-radius: 30px;
+  padding-left: 30px;
+
+}
+
+.card h5 {
+  margin-top: 20px;
+}
+
+.card .img {
+  position: absolute;
+  right: 5%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.card .img img {
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card p {
+  margin-top: 20px;
+  width: 65%;
+}
+
+.card .cardlinks {
+  position: absolute;
+  right: 7%;
+  bottom: 5.5%;
+  font-size: 20px;
+}

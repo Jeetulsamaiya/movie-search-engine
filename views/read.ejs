@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        #main {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(254, 198, 198);
+        }
+
+        #center {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 95%;
+            width: 50%;
+            background-color: rgb(212, 166, 255);
+            border-radius: 30px;
+        }
+
+        #img-container {
+            position: absolute;
+            left: 50%;
+            top: 35%;
+            transform: translate(-50%, -50%);
+        }
+
+        img {
+            height: 450px;
+            width: 450px;
+            object-fit: cover;
+        }
+
+        #data {
+            position: absolute;
+            top: 70%;
+            left: 20%;
+        }
+
+        #data h4,
+        h5 {
+            margin-top: 30px;
+        }
+
+        #a {
+            margin-top: 25px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="center">
+
+
+            <div id="img-container">
+                <img src="<%= data.img %> " alt="">
+            </div>
+            <div id="data">
+
+                <h1>
+                    <%= data.name %>
+                </h1>
+                <h4>Imdb rating -: <%= data.imbd %></h4>
+
+                <h5><%= data.details %></h5>
+                <div id="a">
+
+                    <a href="/ ">home</a>
+                    <a href="/delete/<%= data._id %> ">Delete</a>
+                    <a href="/update/">Update</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
